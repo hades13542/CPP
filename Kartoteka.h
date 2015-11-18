@@ -4,8 +4,15 @@
 class Kartoteka
 {
 public:
-	Kartoteka();
+	Kartoteka(std::string ,const int& );
 	~Kartoteka();
+	void Dodaj(Karta* nowy);
+	void UstawNazwe(std::string nowanazwa);
+	void Wyswietl() const;
+	void WypiszKartoteke() const;
+	friend class Karta;
 private:
-	Kartoteka** _kart;	
+	Karta** _kart;
+	std::string _nazwa;
+	int _ilosc;	
 };

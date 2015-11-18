@@ -90,7 +90,7 @@ int main ()
   kartotekaStudentow.Wyswietl(); // wypisuje: Kartoteka "Studenci" zawiera 2 wpisy: Spongebob, Dexter
   spongebob->UstawImie("Gabka");
   kartotekaStudentow.Wyswietl(); // wypisuje: Kartoteka "Studenci" zawiera 2 wpisy: Gabka, Dexter
-
+/*
   // wykladowcy
   Wykladowca* bruce = new Wykladowca ("Bruce", "Wayne", "nietoperz"); 
   Wykladowca* clark = new Wykladowca ("Clark", "Kent", "tchorz");
@@ -127,7 +127,7 @@ int main ()
   std::cout<<"\nKartoteka ludzi:\n";
   for (unsigned int indeksOsoby = 0; indeksOsoby < ludzie.LiczbaWpisow(); ++indeksOsoby)
     (*(ludzie.ListaWpisow()+indeksOsoby))->WypiszKartoteke();
-  
+  */
   return 0;
 }
 /*

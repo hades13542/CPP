@@ -1,14 +1,20 @@
 #pragma once
 #include <iostream>
 
+class Kartoteka;
 class Karta
 {
 public:
-	Karta(std::string imie, std::string nazwisko):_imie(imie),_nazwisko(nazwisko){}
+	Karta(std::string, std::string);
+	Karta();
 	virtual ~Karta();
 	virtual std::string Imie() const;
 	virtual std::string Nazwisko() const;
+	friend class Kartoteka;
+	virtual void WypiszKartoteke() const;
+	
 protected:
 	std::string _imie;
 	std::string _nazwisko;
+	Kartoteka* _akt;
 };
