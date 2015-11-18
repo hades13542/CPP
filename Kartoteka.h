@@ -6,7 +6,7 @@ class Kartoteka
 public:
 	Kartoteka(std::string ,const int& );
 	~Kartoteka();
-	void Dodaj(Karta* nowy);
+	Kartoteka& Dodaj(Karta*);
 	void UstawNazwe(std::string nowanazwa);
 	void Wyswietl() const;
 	void WypiszKartoteke() const;
@@ -15,4 +15,5 @@ private:
 	Karta** _kart;
 	std::string _nazwa;
 	int _ilosc;	
+	int _curr;
 };

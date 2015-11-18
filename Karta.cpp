@@ -13,3 +13,7 @@ std::string Karta::Nazwisko() const{
 void Karta::WypiszKartoteke() const{
 		std::cout<<_imie<<" jest w kartotece : "<<_akt->_nazwa<<"\n";
 	}
+
+void Karta::UstawImie(std::string noweimie){
+	_imie=noweimie;
+}

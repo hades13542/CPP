@@ -1,6 +1,6 @@
 #include "Kartoteka.h"
 
-Kartoteka::Kartoteka(std::string nazwa,const int& ilosc):_nazwa(nazwa),_ilosc(ilosc){
+Kartoteka::Kartoteka(std::string nazwa,const int& ilosc):_nazwa(nazwa),_ilosc(ilosc),_curr(0){
 	_kart=NULL;
 	_kart = new Karta* [_ilosc];
 	for (int i = 0; i < _ilosc; ++i)
@@ -15,18 +15,25 @@ Kartoteka::~Kartoteka(){
 	}
 	delete [] _kart;
 }
-void Kartoteka::Dodaj(Karta* nowy){
-
+Kartoteka& Kartoteka::Dodaj(Karta* nowy){
+	_kart[_curr]=nowy;
+	_curr++;
+	nowy->_akt=this;
+	return *this;
 }
 void Kartoteka::UstawNazwe(std::string nowanazwa){
 	_nazwa=nowanazwa;
 }
 void Kartoteka::Wyswietl() const{
-	std::cout << "Kartoteka "<<_nazwa<<" zawiera"<<_ilosc<<" wpisy ";
+	std::cout << "Kartoteka \""<<_nazwa<<"\" zawiera "<<_ilosc<<" wpisow ";
 	for (int i = 0; i < _ilosc; ++i)
 	{
-		std::cout<<_kart[i]->_imie <<" \n";
+		std::cout<<_kart[i]->_imie;
+		if(!i%2){
+			std::cout<<", ";
+		}
 	}
+	std::cout<<"\n";
 }
 void Kartoteka::WypiszKartoteke() const{
 }

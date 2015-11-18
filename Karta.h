@@ -12,7 +12,7 @@ public:
 	virtual std::string Nazwisko() const;
 	friend class Kartoteka;
 	virtual void WypiszKartoteke() const;
-	
+	virtual void UstawImie(std::string);
 protected:
 	std::string _imie;
 	std::string _nazwisko;
