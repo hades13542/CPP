@@ -29,11 +29,17 @@ void Kartoteka::Wyswietl() const{
 	for (int i = 0; i < _ilosc; ++i)
 	{
 		std::cout<<_kart[i]->_imie;
-		if(!i%2){
+		if(i!=(_ilosc-1)){
 			std::cout<<", ";
 		}
 	}
 	std::cout<<"\n";
 }
-void Kartoteka::WypiszKartoteke() const{
+
+unsigned Kartoteka::LiczbaWpisow(){
+	return (unsigned)_ilosc;
 }
+
+Karta** Kartoteka::ListaWpisow() const{
+	return _kart;
+	}

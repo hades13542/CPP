@@ -9,7 +9,9 @@ public:
 	Kartoteka& Dodaj(Karta*);
 	void UstawNazwe(std::string nowanazwa);
 	void Wyswietl() const;
-	void WypiszKartoteke() const;
+	//void WypiszKartoteke() const;
+	unsigned LiczbaWpisow();
+	Karta** ListaWpisow() const;
 	friend class Karta;
 private:
 	Karta** _kart;
